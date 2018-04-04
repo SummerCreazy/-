@@ -32,14 +32,16 @@ Ubuntu 建立共享目录：
 		no_subtree：即使输出目录是一个子目录，nfs服务器也不检查其父目录的权限，这样可以提高效率；
 		
 然后退出启动nfs服务：/etc/init.d/rpcbind restart
-                                             /etc/init.d/nfs-kerpel-nfs restart
+                                             /etc/init.d/nfs-kernel-server restart
 
 然后在另一台服务器：先下载nfs(或者 apt-get install nfs-common)
                                              
 然后我也在根目录下新建keystore目录（可以不建）
 
-再输入命令：mount -t nfs-kernel-server 10.6.6.6:/root/keystore /root/keystore
+再输入命令：mount  10.6.6.6:/root/keystore /root/keystore
 10.6.6.6是共享目录的服务器地址
+
+(退出挂载命令：umount 10.6.6.6:/root/keystore /root/keystore)
 
 结束
 
