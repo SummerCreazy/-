@@ -1,6 +1,6 @@
 Ubuntu 建立共享目录：
 首先安装nfs：（nfs是一种linux下的文件系统应用程序）
-                      apt-get install nfs-kerpel-server 
+                      apt-get install nfs-kernel-server 
 
 然后建立共享目录：我是在根目录下创建keystore文件夹 mkdir /root/keystore
 
@@ -38,7 +38,7 @@ Ubuntu 建立共享目录：
                                              
 然后我也在根目录下新建keystore目录（可以不建）
 
-再输入命令：mount -t nfs-kerpel-server 10.6.6.6:/root/keystore /root/keystore
+再输入命令：mount -t nfs-kernel-server 10.6.6.6:/root/keystore /root/keystore
 10.6.6.6是共享目录的服务器地址
 
 结束
